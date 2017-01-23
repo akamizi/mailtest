@@ -44,7 +44,7 @@ if($form->submit()) {
 
       // Set the To addresses with an associative array
       //->setTo(array('receiver@domain.org', 'other@domain.org' => 'A name'))
-      ->setTo(array('maurizio@akabit.it',)
+      ->setTo(array('maurizio@akabit.it'))
 
       // Give it a body
       ->setBody('Here is the message itself')
