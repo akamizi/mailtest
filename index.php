@@ -29,7 +29,7 @@ if($form->submit()) {
   // process and validate the POST data
 	$name = $form->post('name','Nome e Cognome','sanitize_string');
 	$email = $form->post('email','Email','valid_email');
-  $message = $form->post('message','Messaggio','valid_email');
+  $message = $form->post('message','Messaggio','sanitize_string');
 
 	// check if there were any errors
 	if(!$form->errors()) {
@@ -669,7 +669,7 @@ echo $form->messages();
                         //     'class' => 'button',
                         //     'value' => '<span>INVIA</span>'
                         // );
-                        $form->required = '(file)';
+                        $form->required = 'name,email';
                         $form->required_indicator = '*';
                         // now build your form...
                         echo $form->form_open_multipart();
